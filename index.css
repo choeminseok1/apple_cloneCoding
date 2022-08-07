@@ -1,0 +1,993 @@
+@font-face {
+    font-family: SFPRO;
+    src: url(./font/SF-Pro.ttf);
+}
+@font-face {
+    font-family: choice;
+    src: url(./font/ELAND\ 초이스OTF\ M.otf);
+}
+@font-face {
+    font-family: medium;
+    src: url(./font/esamanru\ Medium.ttf);
+}
+@font-face {
+    font-family: core;
+    src: url(./font/비트로\ 코어\ OTF.otf);
+}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+/* 헤더네비게이션 */
+
+header {
+    width: 100%;
+    background-color: #000000cc;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+.header_box {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+.header_bar {
+    padding: 10px 10px;
+}
+.header_bar:hover a {
+    color: #fff;
+}
+.header_bar a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 12px;
+    transition: .3s;
+}
+
+/* hide_menu_part */
+.hide_menu {
+    max-width: 100%;
+    background-color: #000000cc;
+    display: none;
+    transition: .3s;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.hide_menu_frame {
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.hide_btn {
+    padding: 10px 0px;
+    cursor: pointer;
+}
+.hide_btn i {
+    font-size: 25px;
+    color: #f5f5f7;
+}
+.hide_menu_part {
+    position: fixed;
+    max-width: 100%;
+    margin: 0 auto;
+    z-index: 99;
+    top: 45px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1d1d1f;
+    padding-top: 30px;
+    display: none;
+}
+.hide_menu_part input {
+    width: 70%;
+    padding: 7px 10px;
+    margin: 0 auto;
+    display: block;
+    font-size: 16px;
+    background-color: rgba(128, 128, 128, 0.3);
+    color: #6e6e73;
+    border: 0px;
+    border-radius: 10px;
+}
+input:focus {
+    outline: none;
+}
+.hide_menu_part_frame {
+    margin: 0 auto;
+    width: 70%;
+    border-top: 1px solid gray;
+    margin-top: 20px;
+}
+.hide_close {
+    display: none;
+}
+.hide_bar {
+    padding: 10px 0px;
+    border-bottom: 1px solid gray;
+}
+.hide_bar a {
+    color: #fff;
+}
+
+/* nav_part */
+
+nav {
+    background-color: rgba(128, 128, 128, 0.1);
+    display: flex;
+    justify-content: center;
+}
+.nav_text {
+    padding: 15px 0px;
+    font-size: 12px;
+    color: #1d1d1f;
+    font-weight: bold;
+}
+.nav_text1 a {
+    text-decoration: none;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+/* main_secion */
+
+.main_frame {
+    max-width: 100%;
+}
+.main_text_box {
+    position: absolute;
+    text-align: center;
+}
+.main_text_title {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: SFPRO;
+    color: #1d1d1f;;
+}
+.main_text_sub_title {
+    padding: 10px 0px;
+    color: #1d1d1f;
+    font-size: 25px;
+    font-family: choice;
+}
+.main_text_link {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 0 auto;
+}
+.main_text_link a {
+    color: #06c;
+    font-size: 16px;
+    font-weight: bold;
+}
+.mac_book {
+    position: relative;
+}
+.mac_book_text_box {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 22%;
+}
+.mac_book_mk2 img {
+    max-width: 50%;
+}
+.mac_book_img {
+    height: 80vh;
+}
+.iphone13 {
+    position: relative;
+    margin-top: 10px;
+}
+.iphone13_text_box {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.iphone13_img {
+    height: 80vh;
+}
+.watch {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+}
+.watch_text_box {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.watch_mk2 {
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+.watch_img {
+    height: 80vh;
+}
+.series_800 {
+    display: none;
+}
+
+/* column_section */
+
+.column {
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.column_frame {
+    width: 100%;
+    padding: 0px 10px;
+}
+.column_content_box {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.column_content {
+    width: 50%;
+    background-color: #000;
+    position: relative;
+}
+.column_text_box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding-top: 20px;
+}
+.column_text_title {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: choice;
+    margin: 0 auto;
+}
+.column_text_sub_title {
+    font-size: 20px;
+    padding: 5px 0px;
+    margin: 0 auto;
+}
+.column_link_box {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.column_link_box a {
+    color: #06c;
+    font-weight: bold;
+    font-size: 14px;
+}
+.column_img_box {
+    margin-bottom: -4px;
+    height: 400px;
+}
+.column_img_box img {
+    height: inherit;
+}
+.macbook_title {
+    color: #fff;
+}
+.macbook_sub_title img {
+    max-width: 50%;
+}
+.macbook_link {
+    margin: 0 auto;
+}
+.ipad_title img {
+    max-width: 50%;
+}
+.ipad_sub_title {
+    color: #fff;
+}
+.ipad_column {
+    top: 260px;
+}
+.airpod_title {
+    color: #fff;
+}
+.airpod_sub_title {
+    color: #fff;
+}
+.airpod_box {
+    margin: 0 auto;
+    width: 200px;
+    padding-top: 150px;
+}
+.airpod_box img {
+    height: auto;
+}
+.tv_sub_title {
+    padding-top: 150px;
+}
+.tv_sub_title img {
+    max-width: 50%;
+}
+.tv_sub_text {
+    color: #fff;
+}
+.tv_link_box {
+    width: 130px;
+    align-items: center;
+}
+.tv_link a {
+    color: #fff;
+}
+
+/* footer section */
+
+footer {
+    max-width: 100%;
+    background-color: #f5f5f7;
+}
+.footer_box {
+    width: 80%;
+    margin: 0 auto;
+    /* background-color: dodgerblue; */
+}
+.footer_text {
+    font-size: 12px;
+    color: #6e6e73;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footer_nav_bold {
+    font-weight: bold;
+}
+.footer_nav .footer_nav_blank {
+    padding-bottom: 20px;
+}
+.footer_navi {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    padding-top: 15px;
+    /* display: none; */
+}
+.footer_nav_text {
+    padding: 5px 0px;
+}
+.footer_nav_text a {
+    color: #6e6e73;
+    font-size: 12px;
+}
+.footer_nav_text1 {
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    color: #6e6e73;
+    font-size: 12px;
+}
+.footer_nav_text1 a {
+    color: #0066cc;
+}
+.footer_nav_text2 {
+    display: flex;
+    padding-top: 10px;
+    color: #6e6e73;
+    font-size: 12px;
+    gap: 10px;
+}
+.footer_nav_text3 {
+    padding-right: 10px;
+    border-right: 1px solid #6e6e73;
+}
+.footer_nav_text_first {
+    padding-left: 30px;
+}
+.footer_nav_text_last {
+    border-right: none;
+}
+.footer_korea {
+    padding-left: 350px;
+    border-right: none;
+    font-weight: bold;
+}
+.footer_nav_text3 a {
+    color: #6e6e73;
+    font-weight: bold;
+}
+.footer_nav_text4 {
+    font-size: 12px;
+    color: #6e6e73;
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.footer_nav_text5 {
+    border-right: 1px solid #6e6e73;
+    padding-right: 10px;
+}
+.footer_nav_text6 {
+    border-right: none;
+}
+.footer_hide_navi {
+    max-width: 100%;
+    background-color: inherit;
+    display: none;
+}
+.footer_hide_title {
+    display: block;
+    padding: 10px 0px;
+    border-bottom: 1px solid #d2d2d7;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #6e6e73;
+    font-family: SFPRO;
+}
+.footer_hide_nav {
+    display: none;
+}
+.footer_hide_btn {
+    font-size: 12px;
+    padding: 10px 0px;
+    padding-left: 20px;
+}
+.footer_hide_btn a {
+    font-size: 12px;
+    color: #000;
+    font-family: SFPRO;
+}
+
+/* 반응형 파트 */
+
+@media screen and (max-width:1509px) {
+    .header_box {
+        width: 75%;
+    }
+}
+@media screen and (max-width:1475px) {
+    .footer_nav_text_first {
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width:1450px) {
+    .ipad_column {
+        top: 260px;
+    }
+    .footer_korea {
+        padding-left: 290px;
+    }
+}
+@media screen and (max-width:1408px) {
+    .header_box {
+        gap: 15px;
+    }
+}
+@media screen and (max-width:1350px) {
+    .ipad_column {
+        top: 260px
+    }
+    .footer_korea {
+        padding-left: 200px;
+    }
+    .footer_nav_text4 {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:1321px) {
+    .header_box {
+        gap: 10px;
+    }
+}
+@media screen and (max-width:1300px) {
+    .column_iphone13_box {
+        padding-top: 5px;
+    }
+    .macbook_sub_title {
+        padding: 0px;
+        margin: -5px 0px;
+    }
+    .ipad_sub_title {
+        padding: 0px;
+        margin-top: -5px;
+    }
+}
+@media screen and (max-width:1280px) {
+    .column_text_sub_title {
+        font-size: 16px;
+    }
+    .tv_sub_title {
+        padding-top: 190px;
+    }
+    .ipad_column {
+        top: 270px
+    }
+    .footer_korea {
+        padding-left: 130px;
+    }
+    .column_text_box {
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width:1235px) {
+    .header_box {
+        width: 90%;
+    }
+}
+@media screen and (max-width:1183px) {
+    .footer_nav_text2 {
+        font-size: 10px;
+    }
+    .footer_nav_text4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .footer_nav_text5 {
+        border-right: none;
+    }
+}
+@media screen and (max-width:1100px) {
+    .tv_sub_title {
+        padding-top: 180px;
+    }
+    .mac_book_text_box {
+        left: 15%;
+    }
+    .footer_box {
+        width: 95%;
+    }
+}
+@media screen and (max-width:1030px) {
+    .column_text_sub_title {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:985px) {
+    .header_box {
+        width: 95%;
+    }
+    .header_bar a {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:915px) {
+    .main_img {
+        height: 60vh;
+    }
+    .main_text_title {
+        font-size: 40px;
+    }
+    .main_text_sub_title {
+        font-size: 20px;
+    }
+    .main_text_link a {
+        font-size: 12px;
+    }
+    .main_text_link {
+        width: 160px;
+    }
+    .iphone13_text_box {
+        top: 5%;
+    }
+    .watch_text_box {
+        top: 5%;
+    }
+    .column_text_title {
+        font-size: 25px;
+    }
+    .column_link_box {
+        width: 160px;
+    }
+    .column_link_box a {
+        font-size: 12px;
+    }
+    .tv_link_box {
+        width: 110px;
+    }
+    .footer_text {
+        font-size: 10px;
+    }
+    .column_text_sub_title {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:915px) {
+    .column_text_sub_title {
+        font-size: 12px;
+    }
+    .tv_sub_title {
+        padding-top: 200px;
+    }
+}
+@media screen and (max-width:871px) {
+    .header_box {
+        width: 100%;
+    }
+    .footer_nav_text3 {
+        padding-right: 5px;
+    }
+    .footer_nav_text_first {
+        padding-left: 5px;
+    }
+    .footer_korea {
+        padding-left: 100px;
+    }
+}
+@media screen and (max-width:830px) {
+    .show_img {
+        display: none;
+    }
+    .series_800 {
+        display: block;
+    }
+    .header_box {
+        display: none;
+    }
+    .hide_menu {
+        display: block;
+    }
+    .mac_book_text_box {
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .iphone13_text_box {
+        top: 12%;
+    }
+    .watch_text_box {
+        top: 10%;
+    }
+    .watch_mk2 {
+        color: #fff;
+    }
+    .watch_logo_800 {
+        max-width: 70%;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+    .watch_link_box .main_link a {
+        color: #fff;
+    }
+    .ipad_column {
+        top: -20px !important;
+    }
+    .pad_title {
+        color: #fff;
+    }
+    .pad_sub_title {
+        color: #fff;
+    }
+    .column_text_box {
+        width: 60%;
+    }
+    .column_img_box {
+        height: 300px;
+    }
+    .ipad_column {
+        top: 180px;
+    }
+    .airpod_box {
+        width: 150px;
+        padding-top: 120px;
+    }
+    .tv_sub_title {
+        padding-top: 110px;
+    }
+    .footer_navi {
+        display: none;
+    }
+    .footer_hide_navi {
+        display: block;
+    }
+    .footer_nav_text2 {
+        flex-direction: column;
+    }
+    .footer_nav_text_first {
+        padding-left: 0;
+    }
+    .footer_nav_text3 {
+        border-right: none;
+    }
+    .footer_korea {
+        padding-left: 0;
+    }
+    .footer_nav_text5 {
+        padding-right: 0px;
+    }
+}
+@media screen and (max-width:740px) {
+    .main_text_title {
+        font-size: 45px;
+    }
+    .mac_book_mk2 img {
+        max-width: 45%;
+    }
+    .main_text_sub_title {
+        font-size: 18px;
+    }
+    .main_text_link {
+        width: 210px;
+    }
+    .main_text_link a {
+        font-size: 16px;
+    }
+    .apple_watch_img {
+        max-width: 100%;
+    }
+    .watch_mk2 {
+        padding-top: 10px;
+    }
+    .watch_logo_800 {
+        padding-bottom: 0px;
+    }
+    .column_content_box {
+        flex-direction: column;
+    }
+    .column_text_title {
+        font-size: 35px;
+    }
+    .column_text_sub_title {
+        font-size: 22px;
+    }
+    .column_link_box {
+        width: 180px;
+    }
+    .column_link_box a {
+        font-size: 14px;
+    }
+    .column_content {
+        width: 100%;
+    }
+    .column_img_box {
+        height: auto;
+    }
+    .macbook_sub_title img {
+        max-width: 40%;
+    }
+    .ipad_link_box {
+        padding-top: 10px;
+    }
+    .column_airpod {
+        height: 537px;
+    }
+    .airpod_box img {
+        padding-top: 150px;
+    }
+    .column_text_box {
+        padding-top: 70px;
+    }
+    .ipad_title img {
+        max-width: 30%;
+    }
+    .ipad_column {
+        top: 205px;
+    }
+    .airpod_box {
+        padding-top: 130px;
+    }
+    .tv_sub_title {
+        padding-top: 225px;
+    }
+    .tv_link_box {
+        width: 130px;
+    }
+    .tv_sub_title img {
+        max-width: 35%;
+    }
+}
+@media screen and (max-width:650px) {
+    .main_text_title {
+        font-size: 30px;
+    }
+    .main_text_sub_title {
+        font-size: 16px;
+    }
+    .mac_book_mk2 img {
+        max-width: 35%;
+    }
+    .watch_logo_800 {
+        max-width: 55%;
+    }
+    .main_text_link {
+        width: 150px;
+    }
+    .main_text_link a {
+        font-size: 12px;
+    }
+    .column_text_title {
+        font-size: 25px;
+    }
+    .column_text_sub_title {
+        font-size: 16px;
+    }
+    .column_link_box {
+        width: 150px;
+    }
+    .column_link_box a {
+        font-size: 12px;
+    }
+    .macbook_sub_title img {
+        max-width: 35%;
+    }
+    .column_airpod {
+        height: 470px;
+    }
+    .airpod_box img {
+        padding-top: 110px;
+    }
+    .tv_sub_title {
+        padding-top: 210px;
+    }
+    .tv_link_box {
+        width: 110px;
+    }
+}
+@media screen and (max-width:600px) {
+    .column_text_box {
+        padding-top: 55px;
+    }
+    .airpod_box img {
+        padding-top: 85px;
+    }
+    .tv_sub_title {
+        padding-top: 190px;
+    }
+    .column_airpod {
+        height: 433px;
+    }
+}
+@media screen and (max-width:550px) {
+    .hide_btn i {
+        font-size: 20px;
+    }
+    .hide_bar a {
+        font-size: 14px;
+    }
+    .airpod_box img {
+        padding-top: 55px;
+    }
+    .column_airpod {
+        height: 395px;
+    }
+    .apple_watch_img {
+        max-width: 55%;
+    }
+    .mac_book_mk2 {
+        margin-bottom: -10px;
+    }
+    .column_text_box {
+        padding-top: 50px;
+    }
+    .tv_sub_title {
+        padding-top: 165px;
+    }
+    .footer_nav_text1 {
+        border-bottom: none;
+        padding-bottom: 0px;
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:500px) {
+    .tv_sub_title {
+        padding-top: 130px;
+    }
+    .column_text_box {
+        padding-top: 40px;
+    }
+    .column_airpod {
+        height: 358px;
+    }
+    .airpod_box img {
+        padding-top: 15px;
+    }
+}
+@media screen and (max-width:450px) {
+    .nav_text {
+        font-size: 10px;
+    }
+    .mac_book_text_box {
+        top: 8%;
+    }
+    .mac_book_mk2 img {
+        max-width: 55%;
+    }
+    .iphone13_text_box {
+        top: 5%;
+    }
+    .macbook_sub_title img {
+        max-width: 55%;
+    }
+    .column_text_box {
+        padding-top: 25px;
+    }
+    .ipad_title img {
+        max-width: 40%;
+    }
+    .ipad_link_box {
+        padding-top: 0px;
+    }
+    .column_airpod {
+        height: 321px;
+        overflow: hidden;
+    }
+    .airpod_box img {
+        margin-top: -10px;
+    }
+    .hide_bar a {
+        font-size: 12px;
+    }
+    .hide_menu_part {
+        top: 40px;
+    }
+    .column_airpod {
+        height: 283px;
+    }
+    .airpod_box img {
+        margin-top: -35px;
+    }
+    .main_text_title {
+        font-size: 25px;
+    }
+    .main_text_sub_title {
+        font-size: 14px;
+    }
+    .column_text_sub_title {
+        font-size: 14px;
+    }
+    .macbook_sub_title img {
+        margin-top: 5px;
+        max-width: 45%;
+    }
+    .tv_sub_title img {
+        max-width: 55%;
+    }
+    .tv_sub_title {
+        padding-top: 85px;
+    }
+    .footer_nav_text4 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:380px) {
+    .main_text_box {
+        width: 80%;
+    }
+    .mac_book_mk2 img {
+        max-width: 40%;
+    }
+    .watch_logo_800 {
+        max-width: 35%;
+    }
+    .column_text_title {
+        font-size: 22px;
+    }
+    .macbook_sub_title img {
+        max-width: 45%;
+    }
+    .ipad_title img {
+        max-width: 35%;
+    }
+    .column_text_box {
+        width: 80%;
+    }
+    .tv_title img {
+        max-width: 20%;
+    }
+    .tv_sub_title {
+        padding-top: 70px;
+    }
+    .tv_sub_title img {
+        max-width: 45%;
+    }
+}
